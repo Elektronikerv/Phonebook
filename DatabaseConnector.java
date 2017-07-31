@@ -9,8 +9,8 @@ public class DatabaseConnector {
 
 	private String driver = "com.mysql.jdbc.Driver";
 	private String url = "jdbc:mysql://localhost:3306/phonebook";
-	private String login = "root";
-	private String password = "root";
+	private String login = "";
+	private String password = "";
 
 	public DatabaseConnector() {
 		try{
