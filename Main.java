@@ -77,7 +77,7 @@ public class Main extends Application  {
         HBox hbox = new HBox();
         hbox.setSpacing(10);
         hbox.getChildren().addAll(btnAdd, btnDel);
-        vbox.getChildren().addAll(label, table,hbox);
+        vbox.getChildren().addAll(label, table, hbox);
  		
         Scene scene = new Scene(vbox, 400, 500);
         stage.setResizable(false);
@@ -105,7 +105,7 @@ public class Main extends Application  {
         		}
         		else {
         			connector.delete(textNumber.getText());
-    				list.setAll(connector.getAll()); //update table          	}
+    				list.setAll(connector.getAll()); //update table
         			}
         		}
         	catch(SQLException ex) {
