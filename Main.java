@@ -147,14 +147,20 @@ public class Main extends Application  {
         btnAdd.setText("add");
 
         btnAdd.setOnAction( e -> {
-        	try {        	
-        		connector.add(textFirstName.getText(),
-        				  textLastName.getText(),
-        				  textNumber.getText());
-        		list.add(new Person(textFirstName.getText(),
-        				  textLastName.getText(),
-        				  textNumber.getText()));
-        	}
+      		try {
+                	String firstName = textFirstName.getText();
+                	String lastName = textLastName.getText();
+                	String number = textNumber.getText(); 
+                	if(!firstName.trim().isEmpty() && !number.trim().isEmpty()) {        	
+            			connector.add(firstName, lastName, number);
+            			list.add(new Person(firstName, lastName, number));
+            		}
+                	else {
+                	    Alert emptyFieldsError = new Alert(Alert.AlertType.ERROR);
+                	    emptyFieldsError.setContentText("First name and number fields must be filled!");
+                	    emptyFieldsError.showAndWait();
+                	}
+          	}
         	catch (SQLException ex) {
         		ex.printStackTrace();
         	}
