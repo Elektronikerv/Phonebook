@@ -133,7 +133,7 @@ public class Main extends Application  {
         Stage stage = new Stage();
         stage.setTitle("Add new contact");
         VBox box = new VBox();
-        box.setPadding(new Insets(10));
+        box.setPadding(new Insets(8));
 
         box.setAlignment(Pos.CENTER);
     	box.setSpacing(10);
